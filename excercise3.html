@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+       
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        
+      
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .registration-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .registration-form input[type="text"],
+        .registration-form input[type="password"],
+        .registration-form input[type="email"],
+        .registration-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+    
+        .gender-container {
+            margin-bottom: 15px;
+        }
+        
+        .gender-label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .radio-button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+   
+        .terms {
+            margin-bottom: 15px;
+        }
+        
+        .terms input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            background-color: #b56576;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #a35567;
+        }
+        </style>
+</head>
+<body>
+    <div class="form-container">
+        <form class="registration-form">
+            <h2>Registration Form</h2>
+            
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"  required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <div class="gender-container">
+                <label class="gender-label">Gender</label>
+                <label><input type="radio" name="gender" value="male" class="radio-button" required> Male</label>
+                <label><input type="radio" name="gender" value="female" class="radio-button"> Female</label>
+            </div>
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+            </select>
+            
+            <div class="terms">
+                <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

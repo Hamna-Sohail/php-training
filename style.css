@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+section {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    overflow-x: auto; 
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.product-grid{
+    display: grid;
+    grid-column: auto;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.product-card {
+    min-width: 250px; 
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-column: row;
+    align-items: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-card .price {
+    font-size: 20px;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+
+.product-card button {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.product-card button:hover {
+    background-color: #fd1b1b;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-size: 18px;
+}
+
+td {
+    font-size: 16px;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+@media (max-width: 768px) {
+.product-grid {
+flex-direction: row;
+padding: 20px;
+justify-content: center;
+align-items: center;
+}
+}
