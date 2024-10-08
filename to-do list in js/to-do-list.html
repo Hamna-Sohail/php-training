@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+        }
+        ul {
+            list-style-type: none; 
+            padding: 0; 
+        }
+        li {
+            margin: 5px 0; 
+            display: flex; 
+            align-items: center; 
+        }
+        .completed {
+            text-decoration: line-through; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To-Do List</h1>
+    <input type="text" id="todoInput" placeholder="Add a new task">
+    <button id="addButton">Add</button>
+
+    <select id="Select">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="incompleted">Incompleted</option>
+    </select>
+
+    <ul id="todoList"></ul>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
