@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <style>
+        #timer {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #timer.warning {
+            color: red;
+            font-weight: bold;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; 
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        button.hidden {
+            display: none;
+        }
+
+        #quizContainer.hidden,
+        #summaryContainer.hidden {
+            display: none;
+        }
+
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        #feedback {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        #summaryContainer {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="start-btn">Start Quiz</button>
+        <div id="quiz-container" class="hidden">
+            <h2 id="question"></h2>
+            <div id="timer">Time remaining: <span id="time">60</span> seconds</div>
+            <div id="answer"></div>
+            <button id="submit-btn" class="hidden">Submit Answer</button>
+            <p id="feedback" class="hidden"></p>
+            <button id="next-btn" class="hidden">Next Question</button>
+        </div>
+        <div id="summaryContainer" class="hidden">
+            <h2>Quiz Summary</h2>
+            <p id="score"></p>
+            <div id="summary"></div>
+            <button type="button" id="retryButton" class="hidden">Retry Quiz</button>
+        </div>
+    </div>
+    </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script src="jquery2.js"></script>
+</html>
